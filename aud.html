@@ -1,6 +1,6 @@
 <html>
 <head>
-   <title>S2T</title>
+   <title>S2T2</title>
 </head>
    <body>
   
@@ -31,6 +31,13 @@
     final_span.innerHTML = final;
     interim_span.innerHTML = interim;
   }
+ 
+   recognition.onend = function(event) {
+      //Fired when the speech recognition service has disconnected.
+	  recognition.start();//zz
+      console.log('SpeechRecognition.onend');
+  }
+  
 
   function reset() {
     recognizing = false;
